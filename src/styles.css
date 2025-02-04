@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+#spreadsheet {
+    max-width: 100%;
+    overflow: auto;
+    table{
+        td {
+          word-break: break-word;
+          white-space: normal;
+          &.invalid-cell{
+            border: solid 2px red;
+          }
+        }
+        thead>tr>td{
+            padding: 1rem;
+        }
+    }
+    .jexcel_contextmenu{
+        display: none;
+    }
+}

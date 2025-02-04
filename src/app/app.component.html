@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="p-5">
+    <div class="position-relative">
+      <div class="position-absolute top-0 end-0">
+        <div class="dropdown" *ngIf="errorList.length > 0">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Error List
+          </button>
+          <ul class="dropdown-menu">
+            <li *ngFor="let error of errorList" class="dropdown-item">
+              {{error.error}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="spreadsheet">
+    </div>
+  </div>
+  <div class="px-5 row">
+    <div class="col-12 pb-5">
+      <a href="https://docs.google.com/spreadsheets/d/1rptEJqCz0CXQnc_jpnKMhColkIykXJjKYAaziWFzrR8/edit?usp=sharing" target="_blank">Sampe Data</a><span> to test form</span>
+    </div>
+    <div class="col">
+      Daftar Validasi
+      <ul>
+        <li>Nama Pengirim max 50 karakter</li>
+        <li>Telepon Pengirim hanya boleh angka</li>
+        <li>Telepon Pengirim min 10 karakter</li>
+        <li>Telepon Pengirim max 15 karakter</li>
+        <li>Nama Barang max 50 karaker</li>
+        <li>Berat Barang hanya boleh angka (tidak diawali dengan "0")</li>
+        <li>Berat Barang max 50.000 gram</li>
+        <li>Nilai Barang hanya boleh angka (tidak diawali dengan "0")</li>
+        <li>Nilai Barang max 5.000.000</li>
+      </ul>
+    </div>
+    <div class="col-auto">
+      <button type="button" class="btn btn-info text-light" (click)="validateForm()">Validate</button>
+    </div>
+  </div>
+</div>
