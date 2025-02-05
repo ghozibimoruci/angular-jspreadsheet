@@ -83,7 +83,7 @@ export class AppComponent implements AfterViewInit {
             this.errorList.push({
               y: y,
               x: -1,
-              error: "Data tidak lengkap"
+              error: `baris ke-${y+1} : Data tidak lengkap`
             });
             // tambah class invalid untuk 1 row
             const cells = document.querySelectorAll(`#spreadsheet td[data-y="${rowIdx}"]:not(.jexcel_row)`);
@@ -101,7 +101,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Nama Pengirim max 50 karakter"
+                    error: `baris ke-${y+1} : Nama Pengirim max 50 karakter`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
@@ -112,7 +112,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Telepon Pengirim hanya boleh angka"
+                    error: `baris ke-${y+1} : Telepon Pengirim hanya boleh angka`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
@@ -121,7 +121,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Telepon Pengirim min 10 karakter"
+                    error: `baris ke-${y+1} : Telepon Pengirim min 10 karakter`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
@@ -130,7 +130,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Telepon Pengirim max 15 karakter"
+                    error: `baris ke-${y+1} : Telepon Pengirim max 15 karakter`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
@@ -141,7 +141,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Nama Barang max 50 karaker"
+                    error: `baris ke-${y+1} : Nama Barang max 50 karaker`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
@@ -152,7 +152,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Berat Barang hanya boleh angka (tidak diawali dengan \"0\")"
+                    error: `baris ke-${y+1} : Berat Barang hanya boleh angka (tidak diawali dengan \"0\")`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
@@ -161,7 +161,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Berat Barang max 50.000 gram"
+                    error: `baris ke-${y+1} : Berat Barang max 50.000 gram`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
@@ -172,7 +172,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Nilai Barang hanya boleh angka (tidak diawali dengan \"0\")"
+                    error: `baris ke-${y+1} : Nilai Barang hanya boleh angka (tidak diawali dengan \"0\")`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
@@ -181,7 +181,7 @@ export class AppComponent implements AfterViewInit {
                   this.errorList.push({
                     y: y,
                     x: x,
-                    error: "Nilai Barang max 5.000.000"
+                    error: `baris ke-${y+1} : Nilai Barang max 5.000.000`
                   });
                   this.setErrorOnSpreadSheet(x,y);
                 }
